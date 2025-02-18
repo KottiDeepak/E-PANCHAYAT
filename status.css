@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary_color:#0056b3;
+    --border:#ffffff;
+}
+
+/* giving some margin to the body  */
+body{
+    background: url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJhY2tncm91bmQlMjBmb3IlMjBsb2dpbiUyMHBhZ2UlMjBmb3IlMjBnb3Z0JTIwd2ViJTIwc2l0ZXxlbnwwfHwwfHx8MA%3D%3D');
+    font-family: "source Sans 3", sans-serif;
+    }
+/* for smooth scrool behaviour  */
+html{
+        scroll-behavior: smooth;
+    }
+
+.header{
+    display: flex;
+    align-items: center;
+}
+.panchayat{
+    justify-content: center;
+    align-items: center;
+    padding: .1rem;
+    margin: 0 .8rem;
+}
+.logo{
+    height: 10rem;
+    width: 10rem;
+}
+.logo img{
+    padding: .5rem ;
+    margin: .5rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}  
+ /*nav bar  */
+.navbar{
+    margin: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary_color);
+    height: 2rem;
+    
+}
+.links a{
+    text-decoration: none;
+    margin: 0 1rem;
+    color: black;
+    font-size: 0 1rem;
+    font-weight: bold;
+    color: var(--border);
+}
+.links a:hover{
+    color: rgb(189, 247, 0);
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.275);
+    backdrop-filter: blur(10px);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+.footer-section h3{
+    font-size: 2.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 1rem;
+    color: var(--primary_color);
+}
+
+.social-icons i {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.social-icons i:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
