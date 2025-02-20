@@ -61,6 +61,90 @@ html{
     color: rgb(189, 247, 0);
     font-weight: bold;
 }
+/* about Section */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+  }
+  .left h1 {
+    font-size: 3rem;
+    margin-right: 4rem;
+  }
+  .left p {
+    font-size: 2rem;
+  }
+  
+  .right {
+    position: relative;
+  }
+  .right img {
+    height: 28rem;
+    width: 35rem;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+/* team members */
+.heading{
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.team_mem{
+    margin: 2rem 6rem;
+}
+.team{
+    height: 25rem;
+    width: 20rem;
+    border-radius: 2rem;
+    border: 2px solid  #0056b3;
+}
+.team:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+.teams{
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+}
+.img_container{
+    height: 6rem;
+    width: 6rem;
+}
+.img_container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: circle(50%);
+    margin: 7rem;
+    margin-top: 2rem;
+}
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.intro span{
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: bold;
+    margin-top: 2rem ;
+}
+.intro span:last-child{
+    margin-top: 0.5rem;
+    color: #0056b3;
+}
+.quot{
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    text-align: center;
+}
 footer {
     background: rgba(0, 0, 0, 0.275);
     backdrop-filter: blur(10px);
