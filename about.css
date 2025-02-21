@@ -10,7 +10,7 @@
 
 /* giving some margin to the body  */
 body{
-    background: url('./images/background.avif');
+    background: url('./images/background.png');
     font-family: "source Sans 3", sans-serif;
     }
 /* for smooth scrool behaviour  */
@@ -146,9 +146,9 @@ html{
     text-align: center;
 }
 footer {
-    background: rgba(0, 0, 0, 0.275);
+    background: rgb(0, 0, 0);
     backdrop-filter: blur(10px);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
