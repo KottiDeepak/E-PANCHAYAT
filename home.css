@@ -10,7 +10,7 @@
 
 /* giving some margin to the body  */
 body {
-  background: url("https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJhY2tncm91bmQlMjBmb3IlMjBsb2dpbiUyMHBhZ2UlMjBmb3IlMjBnb3Z0JTIwd2ViJTIwc2l0ZXxlbnwwfHwwfHx8MA%3D%3D");
+  background: url("./images/background.png");
   font-family: "source Sans 3", sans-serif;
 }
 /* for smooth scrool behaviour  */
@@ -114,6 +114,32 @@ html {
   color: rgb(189, 247, 0);
   font-weight: bold;
 }
+/* inbuilt code for swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* code for swiper */
+.swiper-slide img{
+  height: 28rem;
+}
+
 /* home page */
 .top {
   display: flex;
@@ -144,27 +170,27 @@ html {
   align-items: center;
   padding: 2rem;
 }
-.left {
+.left{
   position: relative;
 }
-.left img {
+.left img{
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.right {
-  margin-left: 2rem;
+.right{
+  margin-left:2rem ;
 }
-.right h1 {
+.right h1{
   font-size: 3rem;
 }
-.right li {
-  font-size: 3rem;
+.right li{
+  font-size: 1rem;
 }
 footer {
-  background: rgba(0, 0, 0, 0.275);
+  background: rgb(0, 0, 0);
   backdrop-filter: blur(10px);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px 0;
   margin-top: 50px;
