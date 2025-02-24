@@ -24,9 +24,10 @@
     />
 
     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -57,37 +58,39 @@
         <a href="./complain.html">Complain</a>
         <a href="./status.html">Status</a>
         <a href="./About.html">About us</a>
-
       </div>
     </nav>
-<!-- swipe photo -->
-<section class="member">
-    <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="./images/swip1.jpg" alt="swip1">
+    <!-- swipe photo -->
+    <section class="member">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/swip1.jpg" alt="swip1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip2.jpg" alt="swip2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip3.avif" alt="swip3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip4.jpeg" alt="swip4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip5.jpeg" alt="swip5" />
+          </div>
+          <div class="swiper-slide">
+            <img src="" alt="swip5" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-slide">
-        <img src="./images/swip2.jpg" alt="swip2">
-      </div>
-      <div class="swiper-slide">
-        <img src="./images/swip3.avif" alt="swip3">
-      </div>
-      <div class="swiper-slide">
-        <img src="./images/swip4.jpeg" alt="swip4">
-      </div>
-      <div class="swiper-slide">
-        <img src="" alt="swip5">
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+    </section>
 
-<!-- home page -->
+    <!-- home page -->
     <div class="home">
       <section class="top">
         <div class="left">
@@ -158,30 +161,32 @@
           </div>
         </div>
       </div>
-      <p class="footer-bottom">&copy; 2025 Govt. of Odisha. All rights reserved.</p>
+      <p class="footer-bottom">
+        &copy; 2025 Govt. of Odisha. All rights reserved.
+      </p>
     </footer>
 
     <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-   <!-- Initialize Swiper -->
-   <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
