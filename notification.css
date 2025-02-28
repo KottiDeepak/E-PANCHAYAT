@@ -61,6 +61,81 @@ html{
     color: rgb(189, 247, 0);
     font-weight: bold;
 }
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section input,
+  .filter-section select {
+    flex: 1;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Notice Board Styles */
+  #noticeBoard {
+    margin-top: 20px;
+  }
+  
+  .notice-card {
+    border: 1px solid #ddd;
+    border-left: 6px solid #0056b3;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .notice-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .notice-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+  }
+  
+  .notice-date {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .notice-category {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: #ddd;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+  
+  .notice-desc {
+    font-size: 15px;
+    color: #444;
+  }
+  
+
+
+/* footer */
 footer {
     background: rgb(0, 0, 0);
     backdrop-filter: blur(10px);

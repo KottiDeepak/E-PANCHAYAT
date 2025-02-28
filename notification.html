@@ -27,7 +27,7 @@
                 <h1>Odisha Panchayati Raj Department</h1>
             </span>
             <span>
-                <h3>Goverment of Odisha</h3>
+                <h2>Goverment of Odisha</h2>
             </span>
         </div>
     </header>
@@ -43,12 +43,28 @@
         </div>
     </nav>
 
-
-
-
-
-
-
+    <div class="container">
+         <!-- Filter Section for Searching and Filtering by Category -->
+        <div class="filter-section">
+          <input type="text" id="searchInput" placeholder="Search notices..." />
+          <select id="filterCategory">
+            <option value="">All Categories</option>
+            <option value="general">General</option>
+            <option value="emergency">Emergency</option>
+            <option value="meeting">Meeting</option>
+            <option value="event">Event</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+    
+        <!-- Notice Board Section where notices will be displayed -->
+        <section id="noticeBoard">
+          <h3>Latest Notices</h3>
+          <!-- Notice cards will be inserted here by JavaScript -->
+        </section>
+      </div>
+    
+     
      <!-- Footer -->
      <footer>
         <div class="footer-container">
@@ -68,5 +84,88 @@
         </div>
         <p class="footer-bottom">&copy; 2025 Govt. of Odisha. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Sample data representing published notices. 
+    // In a real application, this data could be fetched from a server.
+    const notices = [
+      {
+        title: "Water Supply Maintenance",
+        date: "2023-10-12",
+        category: "general",
+        desc: "Water supply will be interrupted for maintenance on October 12 from 8 AM to 2 PM."
+      },
+      {
+        title: "Emergency: Flood Warning",
+        date: "2023-10-15",
+        category: "emergency",
+        desc: "Heavy rains expected. Citizens in low-lying areas are advised to take precautionary measures."
+      },
+      {
+        title: "Community Meeting",
+        date: "2023-10-20",
+        category: "meeting",
+        desc: "Join us at the community center for a meeting to discuss upcoming infrastructure projects."
+      },
+      {
+        title: "Local Festival Announcement",
+        date: "2023-11-05",
+        category: "event",
+        desc: "Celebrate our annual local festival with cultural programs and community activities."
+      },
+      {
+        title: "Road Repairs Update",
+        date: "2023-10-25",
+        category: "other",
+        desc: "Road repairs in the main market area will begin on October 25. Please plan your travel accordingly."
+      }
+    ];
+    
+    // Function to render notices based on current filter options.
+    function renderNotices() {
+      const noticeBoard = document.getElementById("noticeBoard");
+    
+      // Clear current notices and restore the header.
+      noticeBoard.innerHTML = "<h3>Latest Notices</h3>";
+      
+      // Get filter values.
+      const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+      const filterCat = document.getElementById("filterCategory").value;
+    
+      // Filter the notice data based on search term and selected category.
+      const filteredNotices = notices.filter(notice => {
+        const matchesSearch =
+          notice.title.toLowerCase().includes(searchTerm) ||
+          notice.desc.toLowerCase().includes(searchTerm);
+        const matchesCategory = filterCat ? notice.category === filterCat : true;
+        return matchesSearch && matchesCategory;
+      });
+    
+      // For each matching notice, create and insert a notice card into the board.
+      filteredNotices.forEach(notice => {
+        const noticeCard = document.createElement("div");
+        noticeCard.classList.add("notice-card");
+    
+        noticeCard.innerHTML = `
+          <div class="notice-header">
+            <div class="notice-title">${notice.title}</div>
+            <div class="notice-date">${new Date(notice.date).toLocaleDateString()}</div>
+          </div>
+          <div class="notice-category">${notice.category}</div>
+          <div class="notice-desc">${notice.desc}</div>
+        `;
+    
+        noticeBoard.appendChild(noticeCard);
+      });
+    }
+    
+    // Attach event listeners to the search input and category filter.
+    document.getElementById("searchInput").addEventListener("input", renderNotices);
+    document.getElementById("filterCategory").addEventListener("change", renderNotices);
+    
+    // Initial render on page load.
+    renderNotices();
+    
+      </script>
 </body>
 </html>
