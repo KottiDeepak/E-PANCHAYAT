@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain box - E-panchayat</title>
+    <link rel="stylesheet" href="complain.css">
+
+    <!-- google font/link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <div class="panchayat">
+            <span>
+                <h1>Odisha Panchayati Raj Department</h1>
+            </span>
+            <span>
+                <h3>Goverment of Odisha</h3>
+            </span>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="links">
+            <a href="./home.html">Home</a>
+            <a href="./notification.html">Notification</a>
+            <a href="./complain.html" style="color: rgb(247, 169, 0);">Complain</a>
+            <a href="./status.html">Status</a>
+            <a href="./About.html">About us</a>
+
+        </div>
+    </nav>
+
+    <SECtion class="complain_box">
+        <div class="heading">
+            <div>Digital<span> Complain box</span></div>
+        </div>
+
+        <div class="logos">
+            <div class="email">
+                <i class="fa-regular fa-envelope"></i>
+                <h2>Email us at : panchayatirajofficial@gmail.com</h2>
+            </div>
+            <div class="phone">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h2>Give us a call on : +91 3569814459</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Digital Complaint Box</h2>
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="panchayat">Panchayat Name</label>
+                    <input type="text" id="panchayat" name="panchayat" placeholder="Enter your Panchayat name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Complaint Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">--Select Category--</option>
+                        <option value="road">Roads & Infrastructure</option>
+                        <option value="water">Water Supply</option>
+                        <option value="sanitation">Sanitation</option>
+                        <option value="electricity">Electricity</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaint">Complaint Details</label>
+                    <textarea id="complaint" name="complaint" placeholder="Describe your complaint" rows="5"
+                        required></textarea>
+                </div>
+
+                <button type="submit">Submit Complaint</button>
+            </form>
+        </div>
+
+        <script>
+            // Listen for the form submission
+            document.getElementById('complaintForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Gather form field values and trim any extra whitespace
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const panchayat = document.getElementById('panchayat').value.trim();
+                const category = document.getElementById('category').value;
+                const complaint = document.getElementById('complaint').value.trim();
+
+                // Basic validation to ensure all fields are entered
+                if (!name || !phone || !panchayat || !category || !complaint) {
+                    alert('Please fill out all required fields.');
+                    return;
+                }
+
+                // Simple phone number validation (only digits, 10-15 characters)
+                const phoneRegex = /^[0-9]{10,15}$/;
+                if (!phoneRegex.test(phone)) {
+                    alert('Please provide a valid phone number (10-15 digits).');
+                    return;
+                }
+
+                // Create an object to hold the complaint data
+                const complaintData = {
+                    name: name,
+                    phone: phone,
+                    panchayat: panchayat,
+                    category: category,
+                    complaint: complaint,
+                    submittedAt: new Date().toISOString()
+                };
+
+                // For demonstration purposes, log the complaint data to the console.
+                // In a production scenario, use fetch or AJAX to send the data to a server.
+                console.log('Complaint Data Submitted:', complaintData);
+
+                // Provide feedback to the user
+                alert('Your complaint has been submitted successfully!');
+
+                // Optionally, reset the form after submission
+                document.getElementById('complaintForm').reset();
+            });
+
+        </script>
+
+
+    </SECtion>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We provide the best services to help you succeed. Stay connected with us for more updates.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 Govt. of Odisha. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
