@@ -8,58 +8,104 @@
     --border:#ffffff;
 }
 
-/* giving some margin to the body  */
-body{
-    background: url('./images/background.png');
-    font-family: "source Sans 3", sans-serif;
-    }
-/* for smooth scrool behaviour  */
-html{
-        scroll-behavior: smooth;
-    }
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #000000;
+}
 
-.header{
-    display: flex;
-    align-items: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #e6f3ff, #004d99);
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
 }
-.panchayat{
-    justify-content: center;
-    align-items: center;
-    padding: .1rem;
-    margin: 0 .8rem;
+
+.logo img {
+  height: 6.5rem;
 }
-.logo{
-    height: 10rem;
-    width: 10rem;
+
+.title {
+  text-align: center;
+  flex-grow: 1;
 }
-.logo img{
-    padding: .5rem ;
-    margin: .5rem;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}  
- /*nav bar  */
-.navbar{
-    margin: .2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary_color);
-    height: 2rem;
-    
+
+.title h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
 }
-.links a{
-    text-decoration: none;
-    margin: 0 1rem;
-    color: black;
-    font-size: 0 1rem;
+
+.title h2 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #ffcc00;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #b4daff;
+  color: #004d99;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.auth-buttons button:hover {
+  background-color: #ffd941;
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+
+.auth-buttons a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: linear-gradient(to right, #005bb5,#0280ff);
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #004d99;
     font-weight: bold;
-    color: var(--border);
 }
-.links a:hover{
-    color: rgb(189, 247, 0);
-    font-weight: bold;
+
+main {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
 }
 /* Container Styles */
 .container {
