@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Panchayat System</title>
+    <link rel="stylesheet" href="home.css" />
+
+    <!-- google font/link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo" />
+      </div>
+      <div class="panchayat">
+        <span>
+          <h1>Odisha Panchayati Raj Department</h1>
+        </span>
+        <span>
+          <h3>Goverment of Odisha</h3>
+        </span>
+      </div>
+      <div class="btn">
+        <div class="button">
+          <button class="login"><a href="./login.html">Log in</a></button>
+          <button class="signin"><a href="./signup.html">Sign up</a></button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <div class="links">
+        <a href="./home.html" style="color: rgb(247, 169, 0)">Home</a>
+        <a href="./notification.html">Notification</a>
+        <a href="./complain.html">Complain</a>
+        <a href="./status.html">Status</a>
+        <a href="./About.html">About us</a>
+      </div>
+    </nav>
+    <!-- swipe photo -->
+    <section class="member">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/swip1.jpg" alt="swip1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip2.jpg" alt="swip2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip3.avif" alt="swip3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip4.jpeg" alt="swip4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/swip5.jpg" alt="swip5" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- home page -->
+    <div class="home">
+      <section class="top">
+        <div class="left">
+          <h1>Panchayati raj</h1>
+          <p>
+            The Panchayati Raj system is a system of local self-government in
+            rural India. It is a system of councils that are responsible for the
+            economic development, social justice, and implementation of
+            government schemes in their areas.
+          </p>
+        </div>
+        <div class="right">
+          <img
+            src="./images/panchayat meeting.png"
+            alt="panchyat_pic"
+          />
+        </div>
+      </section>
+
+      <section class="bottom">
+        <div class="left">
+          <img src="./images/flow_chart.png" alt="" />
+        </div>
+        <div class="right">
+          <h1>The main features of the Panchayati Raj system</h1>
+          <ul>
+            <li>
+              <b>Gram Sabha:</b> The foundation of the Panchayati Raj system,
+              the Gram Sabha is a permanent body of people registered to vote in
+              a village.
+            </li>
+            <li>
+              <b>Gram Panchayat:</b> The first level of governance in rural
+              areas, the Gram Panchayat is the main executive council of the
+              Gram Sabha.
+            </li>
+            <li><b>Panchayat Samiti:</b> The block level council.</li>
+            <li><b>Zilla Panchayat:</b> The district level council.</li>
+            <li>
+              <b>Reservations:</b> Seats are reserved for women, Scheduled
+              Castes, and Scheduled Tribes.
+            </li>
+            <li>
+              <b>Elections:</b> Panchayat elections are held every five years.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We provide the best services to help you succeed. Stay connected
+            with us for more updates.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-bottom">
+        &copy; 2025 Govt. of Odisha. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
