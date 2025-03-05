@@ -7,8 +7,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #ece9e6, #ffffff);
-  color: #000000;
+  background: linear-gradient(to right, #ece9e6, #ffffff); 
+   color: #000000;
 }
 
 header {
@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(to right, #e6f3ff, #004d99);
+  background: linear-gradient(to right,#e6f3ff, #004d99);
   color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   
@@ -75,7 +75,7 @@ nav ul {
   display: flex;
   justify-content: center;
   padding: 10px;
-  background: linear-gradient(to right, #005bb5,#e6f3ff);
+  background: linear-gradient(to right, #005bb5,#0084ff);
   margin: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -86,6 +86,7 @@ nav ul li a {
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
